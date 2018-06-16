@@ -1,0 +1,14 @@
+---
+# install git on raspian
+-
+   block:
+      - name: Install Git on Raspbian
+        action: >
+          sudo apt-get update name = "demo-tomcat-1" state = present
+        register: Output
+
+   always:
+      - debug:
+        msg:
+          - "Install Git on Raspbian task ended with message: {{Output}}"
+          - "Install Git on Raspbian - {{Output.changed}}"

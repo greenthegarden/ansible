@@ -1,0 +1,15 @@
+---
+   name: install and configure Radicale
+   hosts: radicale
+   become: yes
+
+   vars:
+      radicale_port : 5432
+
+   tasks:
+   -name: Install docker
+      yum: <code to install the DB>
+
+   -name: Ensure the installed service is enabled and running
+   service:
+      name: <your service name>
